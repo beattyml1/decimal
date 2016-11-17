@@ -1,5 +1,5 @@
 # decimal
-1.17 kb minified but not zipped
+1kb minified but not zipped
 
 Functions
 - constructor(precision, value)
