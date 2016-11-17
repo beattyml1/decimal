@@ -2,6 +2,7 @@
 1.17 kb minified but not zipped
 
 Functions
+- constructor(precision, value)
 - .plus
 - .minus
 - .times
