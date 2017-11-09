@@ -3,6 +3,7 @@ const checkAndFormat = (input: Decimal | number, operation: string) => {
 		return (typeof(input) === 'number') ? new Decimal(this.p, input) : input;
 }
 const compare = 'compare';
+const sep = (1.1).toLocaleString().substring(1, 2);
 
 export default class Decimal {
 	p: number;
@@ -10,6 +11,12 @@ export default class Decimal {
 	constructor(prec: number, val: number) {
 		this.v = Math.round(val * Math.pow(10, prec));
 		this.p = prec;
+	}
+	
+	static parse(s: string) {
+		var parts = stringVal.split(sep);
+		var precision = parts[1].length;
+		return (precision, parseInt(parts[0])*precision + parseInt(parts[1]))
 	}
 
 	plus = (right: Decimal | number) => {
