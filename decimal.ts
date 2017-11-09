@@ -16,7 +16,7 @@ export default class Decimal {
 	static parse(s: string) {
 		var parts = stringVal.split(sep);
 		var precision = parts[1].length;
-		return (precision, parseInt(parts[0])*precision + parseInt(parts[1]))
+		return new Decimal(precision, parseInt(parts[0])*precision + parseInt(parts[1]))
 	}
 
 	plus = (right: Decimal | number) => {
